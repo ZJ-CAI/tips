@@ -1,0 +1,5 @@
+pip install moviepy
+
+from moviepy.editor import AudioFileClip
+my_audio_clip = AudioFileClip("e:/chrome/my_video.mp4")
+my_audio_clip.write_audiofile("e:/chrome/my_audio.wav")
