@@ -1,0 +1,4 @@
+pip install pydub
+
+sound = AudioSegment.from_mp3(source_file_path)
+sound.export(destin_path,format ='wav')
