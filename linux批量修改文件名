@@ -1,0 +1,6 @@
+方法：Rename函数：（得先apt install rename，确保已安装rename功能）
+
+字母的替换rename "s/AA/aa/" * //把文件名中的AA替换成aa  
+修改文件的后缀rename "s//.html//.php/" * //把.html 后缀的改成 .php后缀
+批量添加文件后缀rename "s/$//.txt/" * //把所有的文件名都以txt结尾
+批量删除文件名rename "s//.txt//" * //把所有以.txt结尾的文件名的.txt删掉
