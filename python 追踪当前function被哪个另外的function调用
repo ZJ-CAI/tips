@@ -1,0 +1,6 @@
+import traceback
+
+def funA():
+    s =  traceback.extract_stack()  #在函数中添加这行以及下面那行
+    print '%s Invoked me!'%s[-2][2]  #就能看到是谁调用了funA
+    pass
