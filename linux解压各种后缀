@@ -6,6 +6,6 @@ tar -xzvf file.tar.gz //解压tar.gz
 
 tar -xZvf file.tar.Z   //解压tar.Z
 
-unrar e file.rar //解压rar
+unrar x file.rar //解压rar
 
 unzip file.zip //解压zip
