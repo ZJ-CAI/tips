@@ -1,6 +1,19 @@
 Time.deltaTime ：获取每次刷新的时间间隔
 Applitcation.targetFrameRate : 设定帧数
-this.transform: 当前对象的transform组件
-     this.transform.Translate(x, y, z) : 在xyz轴上分别移动多少距离
 this.gameObject : 当前游戏对象
+GameObject obj = GameObject.Find('文件路径') : 根据文件名寻找文件，例如'./other/22',寻找名为22的图片，不需要后缀
+
+this.transform: 当前对象的transform组件
+     this.transform.Translate(x, y, z) : 设置当前游戏对象在xyz轴上分别移动多少距离
+     this.transform.position = new Vector3(x, y, z) : 直接设定当前游戏对象的坐标
+     GameObject parent = this.transform.parent.gameObject : 获取当前游戏对象的父对象
+     foreach (Transform child in transform){
+          Debug.Log('这是在遍历当前节点下的每个子节点')
+     }
+     obj1.transform.setParent(obj2.transform) ：将游戏对象obj1移动到游戏对象obj2下，即将obj2设为obj1的父节游戏点
+
+
+
 SpriteRenderer renderer = this.gameObject.GetComponent<SpriteRenderer>() : 在当前游戏对象下，寻找类型为SpriteRenderer的组件，并赋值给renderer
+     renderer.flipY = true :由上一步得到的名为renderer对象，将其中的flipY属性设定为true，即将图片以x轴为中心进行翻转
+
