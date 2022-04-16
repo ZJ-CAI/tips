@@ -1,0 +1,6 @@
+Time.deltaTime ：获取每次刷新的时间间隔
+Applitcation.targetFrameRate : 设定帧数
+this.transform: 当前对象的transform组件
+     this.transform.Translate(x, y, z) : 在xyz轴上分别移动多少距离
+this.gameObject : 当前游戏对象
+SpriteRenderer renderer = this.gameObject.GetComponent<SpriteRenderer>() : 在当前游戏对象下，寻找类型为SpriteRenderer的组件，并赋值给renderer
