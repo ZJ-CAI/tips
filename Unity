@@ -10,12 +10,19 @@ this.transform: 当前对象的transform组件
           this.transform.position.y : 获取当前的y坐标
      this.transform.locPosition = new Vector3(x, y, z) : 以当前游戏对象的父节点作为参考坐标系，来设定当前游戏对象的坐标
      this.transform.eulerAngles = new Vector3(x, y, z) : 当前游戏对象分别xyz轴旋转多少度，若要以父节点为中心进行旋转，使用localEulerAngles
+     this.transform.Rotate = new Vector3(x, y, z) : 在当前对象的坐标系下，各个轴的旋转角度
      GameObject parent = this.transform.parent.gameObject : 获取当前游戏对象的父对象
      foreach (Transform child in transform){
           Debug.Log('这是在遍历当前节点下的每个子节点')
      }
      obj1.transform.setParent(obj2.transform) ：将游戏对象obj1移动到游戏对象obj2下，即将obj2设为obj1的父节游戏点
-
+     
+Vector3 vec = new Vector3(x, y, z)
+     vec.magnitude : 获取vec的长度
+     vec.normalize : 将向量vec标准化
+     float angle = Vector3.SignedAngle(a , b, Vector3.forward) : a旋转到b的度数，逆时针为正度数，顺时针为负度数
+          a和b都是Vector3类型的三元数，Vector3.forward为旋转的轴的方向，此时为（0,0,1）
+          
 SpriteRenderer renderer = this.gameObject.GetComponent<SpriteRenderer>() : 在当前游戏对象下，寻找类型为SpriteRenderer的组件，并赋值给renderer
      renderer.flipY = true :由上一步得到的名为renderer对象，将其中的flipY属性设定为true，即将图片以x轴为中心进行翻转
 
