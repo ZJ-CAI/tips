@@ -6,13 +6,13 @@ GameObject obj = GameObject.Find('文件路径') : 根据文件名寻找文件�
 this.transform: 当前对象的transform组件
      this.transform.Translate(x, y, z) : 设置当前游戏对象在xyz轴上分别移动多少距离
      this.transform.position = new Vector3(x, y, z) : 直接设定当前游戏对象的坐标
+     this.transform.locPosition = new Vector3(x, y, z) : 以当前游戏对象的父节点作为参考坐标系，来设定当前游戏对象的坐标
+     this.transform.eulerAngle = new Vector3(x, y, z) : 当前游戏对象分别xyz轴旋转多少度
      GameObject parent = this.transform.parent.gameObject : 获取当前游戏对象的父对象
      foreach (Transform child in transform){
           Debug.Log('这是在遍历当前节点下的每个子节点')
      }
      obj1.transform.setParent(obj2.transform) ：将游戏对象obj1移动到游戏对象obj2下，即将obj2设为obj1的父节游戏点
-
-
 
 SpriteRenderer renderer = this.gameObject.GetComponent<SpriteRenderer>() : 在当前游戏对象下，寻找类型为SpriteRenderer的组件，并赋值给renderer
      renderer.flipY = true :由上一步得到的名为renderer对象，将其中的flipY属性设定为true，即将图片以x轴为中心进行翻转
