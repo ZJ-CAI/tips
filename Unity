@@ -1,13 +1,15 @@
 Time.deltaTime ：获取每次刷新的时间间隔
 Applitcation.targetFrameRate : 设定帧数
-this.gameObject : 当前游戏对象
+this.gameObject : 获取当前游戏对象
 GameObject obj = GameObject.Find('文件路径') : 根据文件名寻找文件，例如'./other/22',寻找名为22的图片，不需要后缀
 
 this.transform: 当前对象的transform组件
-     this.transform.Translate(x, y, z) : 设置当前游戏对象在xyz轴上分别移动多少距离
+     this.transform.Translate(x, y, z, Space.Self) : 设置当前游戏对象在xyz轴上,分别移动多少距离,
+          Space.Self表示以自身坐标系方向进行移动，Space.World表示相对世界坐标系方向进行移动
      this.transform.position = new Vector3(x, y, z) : 直接设定当前游戏对象的坐标
+          this.transform.position.y : 获取当前的y坐标
      this.transform.locPosition = new Vector3(x, y, z) : 以当前游戏对象的父节点作为参考坐标系，来设定当前游戏对象的坐标
-     this.transform.eulerAngle = new Vector3(x, y, z) : 当前游戏对象分别xyz轴旋转多少度
+     this.transform.eulerAngles = new Vector3(x, y, z) : 当前游戏对象分别xyz轴旋转多少度，若要以父节点为中心进行旋转，使用localEulerAngles
      GameObject parent = this.transform.parent.gameObject : 获取当前游戏对象的父对象
      foreach (Transform child in transform){
           Debug.Log('这是在遍历当前节点下的每个子节点')
