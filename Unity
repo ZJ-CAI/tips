@@ -2,6 +2,7 @@ Time.deltaTime ：获取每次刷新的时间间隔
 Applitcation.targetFrameRate : 设定帧数
 this.gameObject : 获取当前游戏对象
 GameObject obj = GameObject.Find('文件路径') : 根据文件名寻找文件，例如'./other/22',寻找名为22的图片，不需要后缀
+     GameObject obj = Instantiate(gameObject, position, transform.rotation) : 创建对象，参数分别为GameObject类型、Vector3类型、quaternion类型
 
 this.transform: 当前对象的transform组件
      this.transform.Translate(x, y, z, Space.Self) : 设置当前游戏对象在xyz轴上,分别移动多少距离,
