@@ -20,6 +20,7 @@ this.transform: 当前对象的transform组件
      transform.up/down/left/right 分别代表当前物体的上下左右方向，可以通过transform.up = Vector3(x, y, z)来让物体朝向任意方向
      
 Vector3 vec = new Vector3(x, y, z)
+     vec.x / vec.y / vec.z : 可以获取vec的x,y,z三个方向上的坐标，甚至可以给xyz赋值，直接改变vec的值
      vec.magnitude : 获取vec的长度
      vec.normalize : 将向量vec标准化
      float angle = Vector3.SignedAngle(a , b, Vector3.forward) : a旋转到b的度数，逆时针为正度数，顺时针为负度数
