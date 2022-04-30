@@ -17,6 +17,7 @@ this.transform: 当前对象的transform组件
           Debug.Log('这是在遍历当前节点下的每个子节点')
      }
      obj1.transform.setParent(obj2.transform) ：将游戏对象obj1移动到游戏对象obj2下，即将obj2设为obj1的父节游戏点
+     transform.up/down/left/right 分别代表当前物体的上下左右方向，可以通过transform.up = Vector3(x, y, z)来让物体朝向任意方向
      
 Vector3 vec = new Vector3(x, y, z)
      vec.magnitude : 获取vec的长度
@@ -26,4 +27,29 @@ Vector3 vec = new Vector3(x, y, z)
           
 SpriteRenderer renderer = this.gameObject.GetComponent<SpriteRenderer>() : 在当前游戏对象下，寻找类型为SpriteRenderer的组件，并赋值给renderer
      renderer.flipY = true :由上一步得到的名为renderer对象，将其中的flipY属性设定为true，即将图片以x轴为中心进行翻转
+
+Camera.main.ScreenToWorldPoint(Vector3) ：将物体在屏幕里的坐标转换成世界坐标系里的坐标，输入参数为一个Vector3类型对象
+
+Input : 获取键盘及鼠标的输入
+     Input.mousePosition ： 获取鼠标在屏幕上的坐标，并非世界坐标系！！！
+     Input.GetAxis() : 可选参数为“Horizontal”或者“Vertical”， 如果输入“Horizontal”，则当按下键盘“A”和“D”时，该函数分别返回-1和1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
