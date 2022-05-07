@@ -1,3 +1,5 @@
+ffmpeg安装方法：https://blog.csdn.net/weixin_44325312/article/details/105068090
+
 ffmpeg -i 32.wav -vn -ac 2 -ar 44100 -acodec pcm_s24le -y 24.wav  # 输入和输出的文件名必须不同
 -i:  输入文件,这里为 32.wav
 -vn: 输出文件禁用视频流
