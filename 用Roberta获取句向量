@@ -1,0 +1,21 @@
+from transformers import BertTokenizer, BertModel
+from scipy import spatial
+
+tokenizer = BertTokenizer.from_pretrained('uer/chinese_roberta_L-8_H-512')
+model = BertModel.from_pretrained("uer/chinese_roberta_L-8_H-512")
+
+text1 = "一个小孩坐在石头上"
+encoded_input1 = tokenizer(text1, return_tensors='pt')
+output1 = model(**encoded_input1)
+vector1 = (output1[0][0][0]).detach().numpy()
+
+text2 = "石头上坐着一个小孩"
+encoded_input2 = tokenizer(text2, return_tensors='pt')
+output2 = model(**encoded_input2)
+vector2 = (output2[0][0][0]).detach().numpy()
+
+# print(vector1)
+# print(vector2)
+
+res = 1 - spatial.distance.cosine(vector1, vector2)
+print(res)
