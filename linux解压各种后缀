@@ -8,6 +8,8 @@ tar -xzvf file.tar.gz //解压tar.gz
 
 tar -xZvf file.tar.Z   //解压tar.Z
 
+tar -xf file.tar.xz //解压tar.xz
+
 unrar x file.rar //解压rar
 
 unzip file.zip //解压zip
